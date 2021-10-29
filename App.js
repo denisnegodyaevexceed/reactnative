@@ -1,24 +1,24 @@
-import { StatusBar } from "expo-status-bar";
+// import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { NativeRouter, Route, Link } from "react-router-native";
-import Test from "./components/Test";
-import Test2 from "./components/Test2";
+import PageOne from "./components/PageOne";
+import PageTwo from "./components/PageTwo";
 
 export default function App() {
   return (
     <NativeRouter>
       <View style={styles.container}>
         <Link to="/test1" underlayColor="#f0f4f7" style={styles.navItem}>
-          <Text style={styles.link}>test1</Text>
+          <Text style={styles.link}>Гоу на первую</Text>
         </Link>
         <Link to="/test2" underlayColor="#f0f4f7" style={styles.navItem}>
-          <Text style={styles.link}>test2</Text>
+          <Text style={styles.link}>Гоу на вторую</Text>
         </Link>
       </View>
       <Route exact path="/" />
-      <Route path="/test1" component={Test} />
-      <Route path="/test2" component={Test2} />
+      <Route path="/test1" component={PageOne} />
+      <Route path="/test2" component={PageTwo} />
     </NativeRouter>
   );
 }
